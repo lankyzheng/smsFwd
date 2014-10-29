@@ -112,5 +112,33 @@ public class MainActivity extends Activity {
 		assert (edit_text != null);
 		return edit_text.getText().toString();
 	}
-
+	/*
+	 * private static void sendSMS(String send_to, String send_message) {
+	 * SmsManager sm = SmsManager.getDefault(); ArrayList<String> parts =
+	 * sm.divideMessage(send_message);
+	 * 
+	 * sm.sendMultipartTextMessage(send_to, null, parts, null, null);
+	 * 
+	 * int numParts = parts.size(); String sms_message_send = ""; int j;
+	 * Log.e("smsfwd", "divided into parts: " + numParts); //
+	 * ArrayList<PendingIntent> sentIntents = new // ArrayList<PendingIntent>();
+	 * // ArrayList<PendingIntent> deliveryIntents = new //
+	 * ArrayList<PendingIntent>();
+	 * 
+	 * String prefixSMS = ""; // prefixSMS = prefixSMS + (char) 5 + (char) 0 +
+	 * (char) 3 + (char) 0; prefixSMS = prefixSMS + (char) 6 + (char) 8 + (char)
+	 * 4 + (char) 0 + (char) 77;
+	 * 
+	 * for (int i = 0; i < numParts; i++) { //
+	 * sentIntents.add(PendingIntent.getBroadcast(getContext(), 0, //
+	 * mSendIntent, 0)); //
+	 * deliveryIntents.add(PendingIntent.getBroadcast(getContext(), // 0,
+	 * mDeliveryIntent, 0)); // if (numParts > 1) { j = i + 1; //
+	 * sms_message_send = prefixSMS + (char) numParts + (char) j + //
+	 * parts.get(i); // } else { sms_message_send = parts.get(i); // }
+	 * sm.sendTextMessage(send_to, null, sms_message_send, null, null);
+	 * Log.e("smsfwd", sms_message_send); }
+	 * 
+	 * }
+	 */
 }
